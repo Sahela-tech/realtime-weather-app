@@ -24,6 +24,7 @@ A lightweight, modern, and highly responsive web application designed to fetch r
 
 ---
 
+
 ## 📁 Project Structure
 
 ```text
