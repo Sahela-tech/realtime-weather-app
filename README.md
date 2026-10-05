@@ -43,7 +43,6 @@ realtime-weather-app/
 ├── app.py                  # Main Flask application route handler
 ├── requirements.txt        # Required Python packages
 ├── .gitignore              # Files ignored by Git
-└── README.md               # Documentation
 
 ````
 
