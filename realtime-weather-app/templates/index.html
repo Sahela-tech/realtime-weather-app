@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyPulse Live Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="weather-wrapper">
+        <!-- Main Card -->
+        <div class="glass-card">
+            <!-- Header Search Bar -->
+            <header class="app-header">
+                <div class="brand">
+                    <span class="logo-icon">🌤️</span>
+                    <span class="logo-text">SkyPulse</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search city or country..." autocomplete="off">
+                    <button id="searchBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Country & City Filter Chips -->
+            <div class="filter-section">
+                <div class="country-picker">
+                    <select id="countrySelect">
+                        <option value="LK">🇱🇰 Sri Lanka</option>
+                        <option value="US">🇺🇸 United States</option>
+                        <option value="GB">🇬🇧 United Kingdom</option>
+                        <option value="JP">🇯🇵 Japan</option>
+                        <option value="IN">🇮🇳 India</option>
+                        <option value="AU">🇦🇺 Australia</option>
+                    </select>
+                </div>
+                <div class="city-chips" id="cityChips"></div>
+            </div>
+
+            <!-- Hero Section: Temperature & Main Status -->
+            <div class="hero-weather">
+                <div class="hero-left">
+                    <span class="weather-badge" id="weatherDesc">Scattered Clouds</span>
+                    <h1 id="currentCity">COLOMBO</h1>
+                    <p class="country-tag" id="currentCountry">Sri Lanka</p>
+                    <div class="temperature-box">
+                        <span id="currentTemp">29</span><span class="degree">°C</span>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="main-weather-icon" id="mainIcon">⛅</div>
+                </div>
+            </div>
+
+            <!-- Detailed Grid Metrics -->
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <div class="metric-icon">🌡️</div>
+                    <div class="metric-info">
+                        <small>Feels Like</small>
+                        <strong id="feelsLike">31°C</strong>
+                    </div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-icon">💧</div>
+                    <div class="metric-info">
+                        <small>Humidity</small>
+                        <strong id="humidity">78%</strong>
+                    </div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-icon">💨</div>
+                    <div class="metric-info">
+                        <small>Wind Speed</small>
+                        <strong id="windSpeed">12 km/h</strong>
+                    </div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-icon">👁️</div>
+                    <div class="metric-info">
+                        <small>Visibility</small>
+                        <strong id="visibility">10 km</strong>
+                    </div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-icon">⏲️</div>
+                    <div class="metric-info">
+                        <small>Pressure</small>
+                        <strong id="pressure">1012 hPa</strong>
+                    </div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-icon">☀️</div>
+                    <div class="metric-info">
+                        <small>Sunrise</small>
+                        <strong id="sunrise">06:02 AM</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
