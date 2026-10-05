@@ -57,12 +57,6 @@ Ensure you have **Python 3.x** installed on your computer.
 
 ### 2. Clone / Download the Repository
 
-```bash
-git clone [https://github.com/your-username/realtime-weather-app.git](https://github.com/your-username/realtime-weather-app.git)
-cd realtime-weather-app
-
-```
-
 ### 3. Install Dependencies
 
 ```bash
